@@ -1,7 +1,7 @@
 if (!isServer) exitWith {};
 if (leader group Petros != Petros) exitWith {};
 
-_tipos   = ["CON","LOG","RES","CONVOY","PR","AS"];
+_tipos   = ["CON","LOG","RES","CONVOY","PR","AS","AS_T"];
 _weights = [1.0,1.0,1.0,1.0,1.0,0.2];
 _tipo = "";
 

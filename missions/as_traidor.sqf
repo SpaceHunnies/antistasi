@@ -47,7 +47,7 @@ _grptraidor selectLeader _traidor;
 
 _posTsk = (position _casa) getPos [random 100, random 360];
 
-_tsk = ["AS",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_posTsk,"CREATED",5,true,true,"Kill"] call BIS_fnc_setTask;
+_tsk = ["AS_T",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_posTsk,"CREATED",5,true,true,"Kill"] call BIS_fnc_setTask;
 misiones pushBack _tsk; publicVariable "misiones";
 
 {_nul = [_x] spawn CSATinit; _x allowFleeing 0} forEach units _grptraidor;
@@ -101,7 +101,7 @@ waitUntil {sleep 1; (dateToNumber date > _fechalimnum) or (not alive _traidor) o
 if ({_traidor knowsAbout _x > 1.4} count ([500,0,_traidor,"BLUFORSpawn"] call distanceUnits) > 0) then
 	{
 	//hint "You have been discovered. The traitor is fleeing to the nearest base. Go and kill him!";
-	_tsk = ["AS",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"CREATED",5,true,true,"Kill"] call BIS_fnc_setTask;
+	_tsk = ["AS_T",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"CREATED",5,true,true,"Kill"] call BIS_fnc_setTask;
 	{_x enableAI "MOVE"} forEach units _grptraidor;
 	_traidor assignAsDriver _veh;
 	[_traidor] orderGetin true;
@@ -117,7 +117,7 @@ waitUntil  {sleep 1; (dateToNumber date > _fechalimnum) or (not alive _traidor) 
 
 if (not alive _traidor) then
 	{
-	_tsk = ["AS",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"SUCCEEDED",5,true,true,"Kill"] call BIS_fnc_setTask;
+	_tsk = ["AS_T",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"SUCCEEDED",5,true,true,"Kill"] call BIS_fnc_setTask;
 	[0,3] remoteExec ["prestige",2];
 	[0,300] remoteExec ["resourcesFIA",2];
 	//[-5,0,_marcador] remoteExec ["citySupportChange",2];
@@ -138,7 +138,7 @@ if (not alive _traidor) then
 	}
 else
 	{
-	_tsk = ["AS",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"FAILED",5,true,true,"Kill"] call BIS_fnc_setTask;
+	_tsk = ["AS_T",[side_blue,civilian],[format ["A traitor has scheduled a meeting with CSAT in %1. Kill him before he provides enough intel to give us trouble. Do this before %2:%3. We don't where exactly this meeting will happen. You will recognise the building by the nearby Offroad and CSAT presence.",_nombredest,numberToDate [2035,_fechalimnum] select 3,numberToDate [2035,_fechalimnum] select 4],"Kill the Traitor",_marcador],_traidor,"FAILED",5,true,true,"Kill"] call BIS_fnc_setTask;
 	[-10,stavros] call playerScoreAdd;
 	if (dateToNumber date > _fechalimnum) then
 		{
@@ -166,7 +166,7 @@ else
 		};
 	};
 
-_nul = [1200,_tsk] spawn borrarTask;
+_nul = [28800,_tsk] spawn borrarTask;
 
 if (_source == "civ") then {
 	_val = server getVariable "civActive";
