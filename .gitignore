@@ -6,3 +6,5 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
+*.sublime-project
+*.sublime-workspace
