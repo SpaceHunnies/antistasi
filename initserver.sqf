@@ -94,13 +94,11 @@ if (hayXLA) then {
 
 unlockedWeaponsInitial = (count unlockedWeapons);
 unlockedItemsInitial = (count unlockedItems);
-unlockedOpticsInitial = (count unlockedOptics);
 unlockedMagazinesInitial = (count unlockedMagazines);
 unlockedBackpacksInitial = (count unlockedBackpacks);
 publicVariable "unlockedWeaponsInitial";
 publicVariable "unlockedMagazinesInitial";
 publicVariable "unlockedItemsInitial";
-publicVariable "unlockedOpticsInitial";
 publicVariable "unlockedBackpacksInitial";
 
 diag_log "Antistasi MP Server. Arsenal config finished";

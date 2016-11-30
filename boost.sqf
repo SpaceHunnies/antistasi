@@ -6,43 +6,25 @@ server setVariable ["hr",20,true];
 server setVariable ["resourcesFIA",10000,true];
 server setVariable ["prestigeNATO",30,true];
 
-if !(hayRHS) then {
-	unlockedWeapons pushBackUnique "arifle_TRG21_F";
-	unlockedWeapons pushBackUnique "launch_NLAW_F";
 
-	unlockedMagazines pushBackUnique "30Rnd_556x45_Stanag";
-	unlockedMagazines pushBackUnique "NLAW_F";
-	unlockedMagazines pushBackUnique "HandGrenade";
+unlockedWeapons pushBackUnique "rhs_weap_ak74m_camo";
+unlockedWeapons pushBackUnique "rhs_weap_rpg26";
 
-	unlockedItems pushBackUnique "ItemGPS";
-	unlockedItems pushBackUnique "ItemRadio";
-	unlockedItems pushBackUnique "optic_Arco";
-	unlockedItems pushBackUnique "V_Chestrig_oli";
-	unlockedItems pushBackUnique "H_HelmetIA";
+unlockedMagazines pushBackUnique "rhs_30Rnd_545x39_AK";
+unlockedMagazines pushBackUnique "rhs_rpg26_mag";
+unlockedMagazines pushBackUnique "rhs_mag_rgd5";
 
-	unlockedOptics pushBackUnique "optic_Arco";
-}
-else {
-	unlockedWeapons pushBackUnique "rhs_weap_ak74m_camo";
-	unlockedWeapons pushBackUnique "rhs_weap_rpg26";
+unlockedItems pushBackUnique "ItemGPS";
+unlockedItems pushBackUnique "ItemRadio";
+unlockedItems pushBackUnique "rhs_acc_1p29";
+unlockedItems pushBackUnique "rhs_6b23_digi_rifleman";
+unlockedItems pushBackUnique "rhs_6b28_ess_bala";
 
-	unlockedMagazines pushBackUnique "rhs_30Rnd_545x39_AK";
-	unlockedMagazines pushBackUnique "rhs_rpg26_mag";
-	unlockedMagazines pushBackUnique "rhs_mag_rgd5";
-
-	unlockedItems pushBackUnique "ItemGPS";
-	unlockedItems pushBackUnique "ItemRadio";
-	unlockedItems pushBackUnique "rhs_acc_1p29";
-	unlockedItems pushBackUnique "rhs_6b23_digi_rifleman";
-	unlockedItems pushBackUnique "rhs_6b28_ess_bala";
-
-	unlockedOptics pushBackUnique "rhs_acc_1p29";
-};
+unlockedItems pushBackUnique "rhs_acc_1p29";
 
 publicVariable "unlockedWeapons";
 publicVariable "unlockedMagazines";
 publicVariable "unlockedItems";
-publicVariable "unlockedOptics";
 
 if (hayXLA) then {
 	[caja,unlockedWeapons,true,false] call XLA_fnc_addVirtualWeaponCargo;

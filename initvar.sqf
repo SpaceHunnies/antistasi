@@ -422,7 +422,6 @@ if (worldName == "Altis") then
 publicVariable "unlockedWeapons";
 publicVariable "unlockedRifles";
 publicVariable "unlockedItems";
-publicVariable "unlockedOptics";
 publicVariable "unlockedBackpacks";
 publicVariable "unlockedMagazines";
 publicVariable "miembros";

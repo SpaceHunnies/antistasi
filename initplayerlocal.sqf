@@ -1,7 +1,6 @@
 waitUntil {!isNull player};
 waitUntil {player == player};
 
-#include "globals.hpp"
 #include "SHK_Fastrope.sqf"
 player removeweaponGlobal "itemmap";
 player removeweaponGlobal "itemgps";
@@ -284,15 +283,6 @@ if (isMultiplayer) then
 	};
 caja addEventHandler ["ContainerOpened",
 	{
-		_fabricas = count (fabricas - mrkAAF);
-		_weapon_unlock_count = BASE_WEP_UNLOCK + (count unlockedWeapons) - unlockedWeaponsInitial - (FACTORY_BONUS*_fabricas);
-		_backpack_unlock_count = BASE_MOCHI_UNLOCK + (count unlockedBackpacks) - unlockedBackpacksInitial - (FACTORY_BONUS*_fabricas);
-		_magazine_unlock_count = BASE_MAG_UNLOCK + (count unlockedMagazines) - unlockedMagazinesInitial - (FACTORY_BONUS*_fabricas);
-		_optics_unlock_count = BASE_OPTIC_UNLOCK + (count unlockedOptics) - unlockedOpticsInitial - (FACTORY_BONUS*_fabricas);
-		_vest_unlock_count = BASE_VEST_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-		_item_unlock_count = BASE_ITEM_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-
-		hint format ["Arsenal Unlocking Requirements\nWeapons: %1\nBackpacks: %2\nMagazines/Usables: %3\nOptics: %4\nVests: %5\nOther Items: %6",_weapon_unlock_count,_backpack_unlock_count,_magazine_unlock_count,_optics_unlock_count,_vest_unlock_count,_item_unlock_count];
 	}
     ];
 

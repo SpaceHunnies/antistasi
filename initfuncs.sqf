@@ -273,7 +273,10 @@ attackWaves = compile preprocessFileLineNumbers "Scripts\attackWaves.sqf";
 SHK_Fastrope = compile preprocessFileLineNumbers "SHK_Fastrope.sqf";
 teleport = compile preprocessFileLineNumbers "teleport.sqf";
 
-
+fnc_objectCategory = compile preprocessFileLineNumbers "municion\objectcategory.sqf";
+fnc_attemptUnlock = compile preprocessFileLineNumbers "municion\attemptunlock.sqf";
+fnc_getUnlockedVariableforCategory = compile preprocessFileLineNumbers "municion\getunlockedvariableforcategory.sqf";
+fnc_categoryUnlockThreshold = compile preprocessFileLineNumbers "municion\categoryunlockthreshold.sqf";
 
 execVM "statSave\saveFuncs.sqf";
 

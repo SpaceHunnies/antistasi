@@ -259,7 +259,7 @@ else {
 						for [{_i=1},{_i<=(1 + round random 2)},{_i=_i+1}] do {
 							_cosa = genOptics call BIS_Fnc_selectRandom;
 							_num = 1 + (floor random 5);
-							if (not(_cosa in unlockedOptics)) then {cajaVeh addItemCargoGlobal [_cosa, _num]};
+							if (not(_cosa in unlockedItems)) then {cajaVeh addItemCargoGlobal [_cosa, _num]};
 						};
 					};
 					[[petros,"globalChat","Someone dropped off a crate near HQ while you were gone. Check the vehicle ammo box."],"commsMP"] call BIS_fnc_MP;

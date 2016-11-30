@@ -640,9 +640,8 @@ apMine = 		"rhs_mine_pmn2_mag";
 unlockedWeapons = 	_unlocked_weapons;
 unlockedRifles = 	_unlocked_rifles;
 unlockedMagazines = _unlocked_magazines;
-unlockedItems = 	_unlocked_items;
+unlockedItems = 	_unlocked_items + _unlocked_optics;
 unlockedBackpacks = _unlocked_backpacks;
-unlockedOptics = 	_unlocked_optics;
 
 basicGear = unlockedWeapons + unlockedMagazines + unlockedItems + unlockedBackpacks;
 

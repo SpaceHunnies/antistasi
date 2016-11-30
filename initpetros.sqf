@@ -72,7 +72,6 @@ petros addMPEventHandler ["mpkilled",
                     _cosa = selectRandom (unlockedItems - ["ItemMap","ItemWatch","ItemCompass","FirstAidKit","Medikit","ToolKit","ItemRadio"]);
                     diag_log format ["item: %1", _cosa];
                     unlockedItems = unlockedItems - [_cosa];
-                    if (_cosa in unlockedOptics) then {unlockedOptics = unlockedOptics - [_cosa]; publicVariable "unlockedOptics"};
                 };
                 publicVariable "unlockedItems";
 

@@ -35,13 +35,13 @@ if (_rifle) then
 		else {_unit addMagazine ["rhs_VOG25", 4];};
 	};
 	[_unit, _rifleFinal, 5, 0] call BIS_fnc_addWeapon;
-	if (count unlockedOptics > 0) then
+	if (true) then
 			{
-			_compatibles = [primaryWeapon _unit] call BIS_fnc_compatibleItems;
-			_posibles = [];
+			 _compatibles = [primaryWeapon _unit] call BIS_fnc_compatibleItems;
+			 _posibles = [];
 			{
 			if (_x in _compatibles) then {_posibles pushBack _x};
-			} forEach unlockedOptics;
+			} forEach unlockedItems;
 			_unit addPrimaryWeaponItem (_posibles call BIS_fnc_selectRandom);
 			};
 	};
@@ -76,4 +76,3 @@ if (hayTFAR) then {
 	_unit addItem "tf_anprc152";
 	_unit assignItem "tf_anprc152";
 	};
-

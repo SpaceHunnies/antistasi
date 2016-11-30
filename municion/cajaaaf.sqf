@@ -63,7 +63,7 @@ if ((typeOf _crate == "I_supplyCrate_F") or (typeOf _crate == "IG_supplyCrate_F"
 	for "_i" from 1 to (floor random 2) do
 		{
 		_cosa = opticasAAF call BIS_Fnc_selectRandom;
-		if (not(_cosa in unlockedOptics)) then
+		if (not(_cosa in unlockedItems)) then
 			{
 			_crate addItemCargoGlobal [_cosa, 1 + (floor random 2)];
 			};
@@ -128,7 +128,7 @@ if (typeOf _crate == vehAmmo) then
 	for "_i" from 1 to (floor random 2) do
 		{
 		_cosa = opticasAAF call BIS_Fnc_selectRandom;
-		if (not(_cosa in unlockedOptics)) then {_crate addItemCargoGlobal [_cosa, 3]};
+		if (not(_cosa in unlockedItems)) then {_crate addItemCargoGlobal [_cosa, 3]};
 		};
 
 	for "_i" from 1 to (floor random 2) do

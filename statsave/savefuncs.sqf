@@ -94,10 +94,7 @@ fn_SetStat =
 			} else {
 				[caja,unlockedItems,true] call BIS_fnc_addVirtualItemCargo;
 			};
-			{
-			if (_x in unlockedItems) then {unlockedOptics pushBack _x};
-			} forEach opticasAAF;
-			publicVariable "unlockedOptics";
+			
 			};
 		if(_varName == 'unlockedMagazines') then
 			{
