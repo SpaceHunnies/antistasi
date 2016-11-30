@@ -70,10 +70,11 @@ clearMagazineCargoGlobal caja;
 clearItemCargoGlobal caja;
 
 {
-	private _category = [_x] call fnc_objectCategory;
+  private _item = _x;
+	private _category = [_item] call fnc_objectCategory;
 	private _unlockedList = [_category] call fnc_getUnlockedVariableforCategory;
-	private _object = [_x, _category] call _fnc_classnameBase;
-	if ([_object, ({_x == _item} count _allUnlockableInventory), _category, _unlockedList] call _fnc_attemptUnlock) then {
+	private _object = [_item, _category] call _fnc_classnameBase;
+	if ([_object, ({_x == _object} count _allUnlockableInventory), _category, _unlockedList] call fnc_attemptUnlock) then {
 		//Unlocked!
 		_unlockedList pushBackUnique _object;
 		[_object, _category] call _fnc_updateVirtualCargo;
@@ -81,7 +82,7 @@ clearItemCargoGlobal caja;
 		_cfg = [_category] call _fnc_getCfgforCategory;
 		_updated = format ["%1%2<br/>",_updated,getText (configFile >> _cfg >> _object >> "displayName")];
 	} else {
-		[_x, _category] call _fnc_addBackToInventory; // x is original classname, not base
+		[_item, _category] call _fnc_addBackToInventory; // item is original classname, not base
 	}
 } forEach _allUnlockableInventory;
 

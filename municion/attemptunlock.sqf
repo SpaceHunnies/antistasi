@@ -23,7 +23,7 @@ _fnc_hasNumReqToUnlock = {
 
 _fnc_hasMagazine = {
   params["_object", "_category"];
-  if (_category == "WEAPON") then {
+  if (_category isEqualTo "WEAPON") then {
     _magazines = getArray (configFile / "CfgWeapons" / _object / "magazines");
     private _ary = unlockedMagazines arrayIntersect _magazines;
     !(_ary isEqualTo []);

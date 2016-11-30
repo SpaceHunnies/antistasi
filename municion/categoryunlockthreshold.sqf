@@ -38,10 +38,10 @@ _fnc_baseUnlockforCategory = {
     case "BACKPACK": { BASE_BACKPACK_UNLOCK };
     case "VEST": { BASE_VEST_UNLOCK };
     case "OPTIC": { BASE_OPTIC_UNLOCK };
-    case "ITEM": { BASE_ITEM_UNLOCK };
     case "NVG": { BASE_NVG_UNLOCK };
     case "RANGEFINDER": { BASE_RANGEFINDER_UNLOCK };
     case "DESIGNATOR": { BASE_DESIGNATOR_UNLOCK };
+    default { BASE_ITEM_UNLOCK };
   };
 };
 
@@ -59,5 +59,6 @@ _fnc_initialUnlockforCategory = {
 private _unlockedList = ["_category"] call fnc_getUnlockedVariableforCategory;
 private _baseUnlock = ["_category"] call _fnc_baseUnlockforCategory;
 private _unlockedInitial = ["_category"] call _fnc_initialUnlockforCategory;
+private _fabricas = count (fabricas - mrkAAF);
 
 _baseUnlock + (count _unlockedList) - _unlockedInitial - (FACTORY_BONUS*_fabricas);
