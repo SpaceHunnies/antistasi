@@ -12,12 +12,12 @@
  *
  */
 
-params ["_object", "_category", "_inventoryCountofObject", "_unlockedList"];
-private _req_to_unlock = ["_category", "_inventoryCountofObject"] call fnc_categoryUnlockThreshold;
+params ["_object", "_inventoryCountofObject","_category", "_unlockedList"];
 
 _fnc_hasNumReqToUnlock = {
   params ["_category", "_inventoryCountofObject"];
-  private _threshold = ["_category", "_inventoryCountofObject"] call fnc_categoryUnlockThreshold;
+  private _threshold = [_category, _inventoryCountofObject] call fnc_categoryUnlockThreshold;
+  diag_log format ["%1, %2", _inventoryCountofObject, _threshold];
   _inventoryCountofObject > _threshold;
 };
 
@@ -32,4 +32,4 @@ _fnc_hasMagazine = {
   };
 };
 
-!(_object in _unlockedList) && { [_object, _category] call _fnc_hasMagazine } && { ["_category", "_inventoryCountofObject"] call _fnc_hasNumReqToUnlock };
+!(_object in _unlockedList) && { [_object, _category] call _fnc_hasMagazine } && { [_category, _inventoryCountofObject] call _fnc_hasNumReqToUnlock };

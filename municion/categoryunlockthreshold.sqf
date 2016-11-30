@@ -56,9 +56,9 @@ _fnc_initialUnlockforCategory = {
   };
 };
 
-private _unlockedList = ["_category"] call fnc_getUnlockedVariableforCategory;
-private _baseUnlock = ["_category"] call _fnc_baseUnlockforCategory;
-private _unlockedInitial = ["_category"] call _fnc_initialUnlockforCategory;
+private _unlockedList = [_category] call fnc_getUnlockedVariableforCategory;
+private _baseUnlock = [_category] call _fnc_baseUnlockforCategory;
+private _unlockedInitial = [_category] call _fnc_initialUnlockforCategory;
 private _fabricas = count (fabricas - mrkAAF);
 
 _baseUnlock + (count _unlockedList) - _unlockedInitial - (FACTORY_BONUS*_fabricas);
