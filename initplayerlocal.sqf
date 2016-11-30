@@ -283,6 +283,7 @@ if (isMultiplayer) then
 	};
 caja addEventHandler ["ContainerOpened",
 	{
+		hint format ["Arsenal Unlocking Requirements\nWeapons: %1\nBackpacks: %2\nMagazines/Usables: %3\nOptics: %4\nVests: %5\nOther Items: %6",["WEAPON"] call fnc_categoryUnlockThreshold,["BACKPACK"] call fnc_categoryUnlockThreshold,["WEAPON"] call fnc_categoryUnlockThreshold,["OPTIC"] call fnc_categoryUnlockThreshold,["VEST"] call fnc_categoryUnlockThreshold,["ITEM"] call fnc_categoryUnlockThreshold];
 	}
     ];
 
