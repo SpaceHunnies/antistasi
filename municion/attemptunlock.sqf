@@ -18,7 +18,7 @@ _fnc_hasNumReqToUnlock = {
   params ["_category", "_inventoryCountofObject"];
   private _threshold = [_category, _inventoryCountofObject] call fnc_categoryUnlockThreshold;
   diag_log format ["%1, %2", _inventoryCountofObject, _threshold];
-  _inventoryCountofObject > _threshold;
+  _inventoryCountofObject >= _threshold;
 };
 
 _fnc_hasMagazine = {

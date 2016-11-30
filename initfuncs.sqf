@@ -277,6 +277,7 @@ fnc_objectCategory = compile preprocessFileLineNumbers "municion\objectcategory.
 fnc_attemptUnlock = compile preprocessFileLineNumbers "municion\attemptunlock.sqf";
 fnc_getUnlockedVariableforCategory = compile preprocessFileLineNumbers "municion\getunlockedvariableforcategory.sqf";
 fnc_categoryUnlockThreshold = compile preprocessFileLineNumbers "municion\categoryunlockthreshold.sqf";
+fnc_buildArsenalRequirements = compile preprocessFileLineNumbers "municion\buildarsenalrequirements.sqf";
 
 execVM "statSave\saveFuncs.sqf";
 

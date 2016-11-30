@@ -52,17 +52,11 @@ if (isMultiplayer) then {
 	diag_log format ["Antistasi MP Client: JIP?: %1",_isJip];
 	caja addEventHandler ["ContainerOpened", {
 		params["_object", "_jugador"];
-		_fabricas = count (fabricas - mrkAAF);
-	  _weapon_unlock_count = BASE_WEP_UNLOCK + (count unlockedWeapons) - unlockedWeaponsInitial - (FACTORY_BONUS*_fabricas);
-		_backpack_unlock_count = BASE_MOCHI_UNLOCK + (count unlockedBackpacks) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-		_magazine_unlock_count = BASE_MAG_UNLOCK + (count unlockedMagazines) - unlockedMagazinesInitial - (FACTORY_BONUS*_fabricas);
-		_optics_unlock_count = BASE_OPTIC_UNLOCK + (count unlockedOptics) - unlockedOpticsInitial - (FACTORY_BONUS*_fabricas);
-		_vest_unlock_count = BASE_VEST_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-		_item_unlock_count = BASE_ITEM_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-
 	  if !([_jugador] call isMember) then {
 	    _jugador setPos position petros;
-			hint format ["You are not in the Member's List of this Server.\n\nAsk the Commander in order to be allowed to access the HQ Ammobox.\n\nIn the meantime you may use the other box to store equipment and share it with others.\n\nArsenal Unlocking Requirements\nWeapons: %1\nBackpacks: %2\nMagazines/Usables: %3\nOptics: %4\nVests: %5\nOther Items: %6",_weapon_unlock_count,_backpack_unlock_count,_magazine_unlock_count,_optics_unlock_count,_vest_unlock_count,_item_unlock_count];
+			_arsenalReqs = [] call fnc_buildArsenalRequirements;
+			_warning = "You are not in the Member's List of this Server.\n\nAsk the Commander in order to be allowed to access the HQ Ammobox.\n\nIn the meantime you may use the other box to store equipment and share it with others.\n\n";
+			hint (_warning + _arsenalReqs);
 	  };
 	}];
   player addEventHandler ["InventoryOpened", {
@@ -71,14 +65,9 @@ if (isMultiplayer) then {
 		if !([_jugador] call isMember) then {
 			if ((_object == caja) or ((_jugador select 0) distance caja < 3)) then {
 				_control = true;
-				_fabricas = count (fabricas - mrkAAF);
-				_weapon_unlock_count = BASE_WEP_UNLOCK + (count unlockedWeapons) - unlockedWeaponsInitial - (FACTORY_BONUS*_fabricas);
-				_backpack_unlock_count = BASE_MOCHI_UNLOCK + (count unlockedBackpacks) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-				_magazine_unlock_count = BASE_MAG_UNLOCK + (count unlockedMagazines) - unlockedMagazinesInitial - (FACTORY_BONUS*_fabricas);
-				_optics_unlock_count = BASE_OPTIC_UNLOCK + (count unlockedOptics) - unlockedOpticsInitial - (FACTORY_BONUS*_fabricas);
-				_vest_unlock_count = BASE_VEST_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-				_item_unlock_count = BASE_ITEM_UNLOCK + (count unlockedItems) - unlockedItemsInitial - (FACTORY_BONUS*_fabricas);
-				hint format ["You are not in the Member's List of this Server.\n\nAsk the Commander in order to be allowed to access the HQ Ammobox.\n\nIn the meantime you may use the other box to store equipment and share it with others.\n\nArsenal Unlocking Requirements\nWeapons: %1\nBackpacks: %2\nMagazines/Usables: %3\nOptics: %4\nVests: %5\nOther Items: %6",_weapon_unlock_count,_backpack_unlock_count,_magazine_unlock_count,_optics_unlock_count,_vest_unlock_count,_item_unlock_count];
+				_arsenalReqs = [] call fnc_buildArsenalRequirements;
+				_warning = "You are not in the Member's List of this Server.\n\nAsk the Commander in order to be allowed to access the HQ Ammobox.\n\nIn the meantime you may use the other box to store equipment and share it with others.\n\n";
+				hint (_warning + _arsenalReqs);
 			};
 		};
 		_control
@@ -283,7 +272,8 @@ if (isMultiplayer) then
 	};
 caja addEventHandler ["ContainerOpened",
 	{
-		hint format ["Arsenal Unlocking Requirements\nWeapons: %1\nBackpacks: %2\nMagazines/Usables: %3\nOptics: %4\nVests: %5\nOther Items: %6",["WEAPON"] call fnc_categoryUnlockThreshold,["BACKPACK"] call fnc_categoryUnlockThreshold,["WEAPON"] call fnc_categoryUnlockThreshold,["OPTIC"] call fnc_categoryUnlockThreshold,["VEST"] call fnc_categoryUnlockThreshold,["ITEM"] call fnc_categoryUnlockThreshold];
+		_arsenalReqs = [] call fnc_buildArsenalRequirements;
+		hint _arsenalReqs;
 	}
     ];
 
