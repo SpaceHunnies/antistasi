@@ -2,7 +2,7 @@ _nul = createDialog "members_menu";
 
 waitUntil {dialog};
 waitUntil {!dialog};
-if (isNil"miembros") then
+if (isNil "miembros") then
   {
   miembros = [];
   publicVariable "miembros";

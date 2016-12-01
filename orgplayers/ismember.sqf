@@ -1,5 +1,5 @@
-_check = false;
-_obj = (_this select 0) getVariable ["owner",_this select 0];
-if ((count miembros == 0) or ((getPlayerUID _obj) in miembros) or (!isMultiplayer)) then {_check = true};
-
-_check
+params["_obj"];
+if !(isMultiplayer) exitWith { true };
+if (isNil "miembros") exitWith { true };
+_owner = _obj getVariable ["owner",_obj];
+(count miembros > 0) && {(getPlayerUID _owner) in miembros}
