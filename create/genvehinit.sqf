@@ -85,8 +85,6 @@ else
   };
 [_veh] spawn cleanserVeh;
 
-//_veh addEventHandler ["Killed",{[_this select 0] spawn postmortem}];
-
 if ((count crew _veh) > 0) then
   {
   [_veh] spawn VEHdespawner

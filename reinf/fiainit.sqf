@@ -402,7 +402,7 @@ _unit setskill ["reloadSpeed",_reload];
 if (player == leader _unit) then {
   _EHkilledIdx = _unit addEventHandler ["killed", {
     _muerto = _this select 0;
-    [_muerto] spawn postmortem;
+    [_muerto] spawn fnc_cleanupDeadBody;
     if (typeOf _muerto != "b_g_survivor_F") then {arrayids = arrayids + [name _muerto]};
     _nul = [0.25,0,getPos _muerto] remoteExec ["citySupportChange",2];
     _muerto setVariable ["BLUFORSpawn",nil,true];
@@ -457,7 +457,7 @@ else {
         _killer addRating 1000;
       };
     };
-    [_muerto] spawn postmortem;
+    [_muerto] spawn fnc_cleanupDeadBody;
     _muerto setVariable ["BLUFORSpawn",nil,true];
     _nul = [0,-0.25,getPos _muerto] remoteExec ["citySupportChange",2];
   }];

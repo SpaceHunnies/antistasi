@@ -60,8 +60,8 @@ _unit addEventHandler ["HandleDamage",
   }
   ];
 if (_unit getVariable ["OPFORSpawn",false]) then {_unit setVariable ["OPFORSpawn",nil,true]};
-[_unit] spawn postmortem;
-[_caja] spawn postmortem;
+[_unit] spawn fnc_cleanupDeadBody;
+[_caja] spawn fnc_cleanupDeadBody;
 sleep 10;
 _unit allowDamage true;
 _unit enableSimulationGlobal false;

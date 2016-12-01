@@ -7,7 +7,7 @@ if (isNull _viejo) exitWith {};
 
 waitUntil {alive player};
 
-_nul = [_viejo] spawn postmortem;
+_nul = [_viejo] spawn fnc_cleanupDeadBody;
 
 _owner = _viejo getVariable ["owner",_viejo];
 

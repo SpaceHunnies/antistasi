@@ -9,7 +9,7 @@ if (_veh isKindOf "Car") then
 
 [_veh] spawn cleanserVeh;
 
-_veh addEventHandler ["Killed",{[_this select 0] spawn postmortem}];
+_veh addEventHandler ["Killed",{[_this select 0] spawn fnc_cleanupDeadBody}];
 
 if (count crew _veh == 0) then
   {
