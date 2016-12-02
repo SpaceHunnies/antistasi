@@ -6,3 +6,7 @@ texHeaders.bin
 *.swo
 *.biprivatekey
 Thumbs.db
+
+# Sublime user file ignores
+*.sublime-project
+*.sublime-workspace
