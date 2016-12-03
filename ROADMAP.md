@@ -34,8 +34,11 @@
 * Russia support should act as an "ambient difficulty" level - 100 is max, 0 is minimum.
 * NATO support should feel like god coming down from the sky to help you - it should usually offer you tactical capability beyond your current level.
 
-## Versions
+## Core systems
 
-### 0.1
-
-*
+* Influence - economic and military
+* Installations
+* Mission intel (Reworking rewards and building the radio tower mission)
+* NATO rework
+* Tactical progression - enemy side
+* Tactical progression - player side
