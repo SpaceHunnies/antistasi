@@ -1,8 +1,4 @@
-private ["_marcador","_size","_area"];
-
-_marcador = _this select 0;
-_size = 0;
-_area = markerSize _marcador;
-_size = _area select 0;
-if (_size < _area select 1) then {_size = _area select 1};
-_size
+// Returns the larger of [x, y] from markerSize
+params ["_marker"];
+_markerSize = markerSize _marker;
+(_markerSize select 0) max (_markerSize select 1)
