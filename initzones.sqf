@@ -1,11 +1,3 @@
-//usage: place on the map markers covering the areas where you want the AAF operate, and put names depending on if they are powerplants,resources, bases etc.. The marker must cover the whole operative area, it's buildings etc.. (for example in an airport, you must cover more than just the runway, you have to cover the service buildings etc..)
-//markers cannot have more than 500 mts size on any side or you may find "insta spawn in your nose" effects.
-//do not do it on cities and hills, as the mission will do it automatically
-//the naming convention must be as the following arrays, for example: first power plant is "power", second is "power_1" thir is "power_2" after you finish with whatever number.
-//to test automatic zone creation, init the mission with debug = true in init.sqf
-//of course all the editor placed objects (petros, flag, respawn marker etc..) have to be ported to the new island
-//deletion of a marker in the array will require deletion of the corresponding marker in the editor
-//only touch the commented arrays
 
 forcedSpawn = [];
 ciudades = [];
@@ -22,7 +14,6 @@ puertos = ["puerto","puerto_1","puerto_2","puerto_3","puerto_4"];//seaports, add
 controles = ["control","control_1","control_2","control_3","control_4","control_5","control_6","control_7","control_8","control_9","control_10","control_11","control_12","control_13","control_14","control_15","control_16","control_17","control_18","control_19","control_20"];//use this for points where you want a roadblock (logic/strategic points, such as crossroads, airport or bases entrances etc..) game will add some more automatically
 seaMarkers = ["seaPatrol","seaPatrol_1","seaPatrol_2","seaPatrol_3","seaPatrol_4","seaPatrol_5","seaPatrol_6","seaPatrol_7","seaPatrol_8","seaPatrol_9","seaPatrol_10","seaPatrol_11","seaPatrol_12","seaPatrol_13","seaPatrol_14","seaPatrol_15","seaPatrol_16","seaPatrol_17","seaPatrol_18","seaPatrol_19","seaPatrol_20","seaPatrol_21","seaPatrol_22","seaPatrol_23","seaPatrol_24","seaPatrol_25","seaPatrol_26","seaPatrol_27"];
 puestosFIA = [];
-puestosNATO = [];
 campsFIA = [];
 campsTony = [];
 mrkFIA = ["FIA_HQ"];

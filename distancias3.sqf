@@ -97,15 +97,10 @@ else
         {
         if ((_marcador in recursos) or (_marcador in fabricas)) then {[_marcador] remoteExec ["createFIArecursos",HCGarrisons];} else {
         if ((_marcador in power) or (_marcador == "FIA_HQ")) then {[_marcador] remoteExec ["createFIApower",HCGarrisons];} else {
-        if (_marcador in aeropuertos) then {[_marcador] remoteExec ["createNATOaerop",HCGarrisons];} else {
-        if (_marcador in bases) then {[_marcador] remoteExec ["createNATObases",HCGarrisons];} else {
         if (_marcador in puestosFIA) then {[_marcador] remoteExec ["createFIApuestos2",HCGarrisons];} else {
         if ((_marcador in puestos) or (_marcador in puertos)) then {[_marcador] remoteExec ["createFIApuestos",HCGarrisons];} else {
         if (_marcador in campsFIA) then {[_marcador] remoteExec ["createCampFIA",HCGarrisons];} else {
-        if (_marcador in campsTony) then {[_marcador] remoteExec ["createBlackMarket",HCGarrisons];} else {
-        if (_marcador in puestosNATO) then {[_marcador] remoteExec ["createNATOpuesto",HCGarrisons];};
-        };
-        };};
+        if (_marcador in campsTony) then {[_marcador] remoteExec ["createBlackMarket",HCGarrisons];}
         };};};};};};
         };
     }

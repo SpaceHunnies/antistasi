@@ -23,7 +23,6 @@ _tipoVeh = typeOf _veh;
 _coste = 0;
 
 call {
-  if (_tipoVeh in vehNATO) exitWith {hint "You cannot sell NATO vehicles"};
   if (_tipoVeh in vehFIA) exitWith {_coste = round (([_tipoVeh] call vehiclePrice)/2)};
   if (_tipoveh == "C_Van_01_fuel_F") exitWith {_coste = 50};
   if (_tipoVeh in arrayCivVeh) exitWith {_coste = 25};
@@ -72,6 +71,3 @@ if (_veh in reportedVehs) then {reportedVehs = reportedVehs - [_veh]; publicVari
 if (_veh isKindOf "StaticWeapon") then {deleteVehicle _veh};
 
 hint "Vehicle Sold";
-
-
-

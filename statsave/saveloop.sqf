@@ -188,7 +188,7 @@ if ((_veh isKindOf "StaticWeapon") and (_testDist < 50)) then {
 
 if (_veh distance getMarkerPos "respawn_west" < 50) then
   {
-  if ((not (_veh isKindOf "StaticWeapon")) && !(_veh isKindOf "ThingX") and (not (_veh isKindOf "ReammoBox")) and (not (_veh isKindOf "FlagCarrier")) and (not(_veh isKindOf "Building")) and (not (_tipoVeh in planesNATO)) and (not (_tipoVeh in vehNATO)) and (not (_tipoVeh == "C_Van_01_box_F")) and (count attachedObjects _veh == 0) and (alive _veh) and ({(alive _x) and (!isPlayer _x)} count crew _veh == 0) and (not(_tipoVeh == "WeaponHolderSimulated"))) then
+  if ((not (_veh isKindOf "StaticWeapon")) && !(_veh isKindOf "ThingX") and (not (_veh isKindOf "ReammoBox")) and (not (_veh isKindOf "FlagCarrier")) and (not(_veh isKindOf "Building")) and !(_tipoVeh in planesNATO) and (not (_tipoVeh == "C_Van_01_box_F")) and (count attachedObjects _veh == 0) and (alive _veh) and ({(alive _x) and (!isPlayer _x)} count crew _veh == 0) and (not(_tipoVeh == "WeaponHolderSimulated"))) then
     {
     _posVeh = getPos _veh;
     _dirVeh = getDir _veh;

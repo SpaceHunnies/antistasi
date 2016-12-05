@@ -24,22 +24,6 @@ if (_type == "cmpOP") exitWith {
   } foreach _objs;
 };
 
-if (_type == "NATORB") exitWith {
-  {
-     if (  str typeof _x find "Land_CncBarrier_F" > -1
-        or str typeof _x find "Land_BagBunker_Tower_F" > -1
-          or str typeof _x find "RoadBarrier_F" > -1)
-      then {
-            _objs pushBack _x;
-        };
-  } forEach nearestObjects [_pos, [], 15];
-
-  {
-    _x enableSimulation false;
-      _x hideObjectGlobal true;
-  } foreach _objs;
-};
-
 if (_type == "cmpMTN") exitWith {
   {
      if (  str typeof _x find "Land_HBarrier" > -1
