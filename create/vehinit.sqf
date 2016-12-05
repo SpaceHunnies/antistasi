@@ -13,7 +13,7 @@ if (_veh isKindOf "Car") then
 
 _tipo = typeOf _veh;
 
-if ((_tipo in vehNATO) or (_tipo in planesNATO)) then
+if ((_tipo in planesNATO)) then
   {
   clearMagazineCargoGlobal _veh;
   clearWeaponCargoGlobal _veh;

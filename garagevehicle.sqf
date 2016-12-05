@@ -14,7 +14,7 @@ if ({isPlayer _x} count crew _veh > 0) exitWith {hint "In order to store vehicle
 //if (_veh isKindOf "Air") exitWith {hint "Garage cannot content Air vehicles.\n\nSorry."};
 _tipoVeh = typeOf _veh;
 
-if ((_tipoVeh in vehNATO) or (_tipoVeh in planesNATO)) exitWith {hint "You cannot keep NATO vehicles"};
+if ((_tipoVeh in planesNATO)) exitWith {hint "You cannot keep NATO vehicles"};
 
 if (_veh isKindOf "Man") exitWith {hint "Are you kidding?"};
 

@@ -420,20 +420,6 @@ if (hayTFAR) then
   {
   _texto = ["TFAR Detected\n\nAntistasi detects TFAR in the server config.\nAll players will start with TFAR default radios.\nDefault revive system will shut down radios while players are inconscious.\n\n"];
   };
-if (hayACE) then
-  {
-
-  _texto = _texto + ["ACE 3 Detected\n\nAntistasi detects ACE modules in the server config.\nACE items added to arsenal, ammoboxes, and NATO drops. Default AI control is disabled\nIf ACE Medical is used, default revive system will be disabled.\nIf ACE Hearing is used, default earplugs will be disabled."];
-  };
-if (hayRHS) then
-  {
-  _texto = _texto + ["RHS-AFRF Detected\n\nAntistasi detects RHS - AFRF in the server config.\nAAF will be replaced with VDV, VMF will take the place of CSAT.\n\nRecruited AI will use AFRF gear."];
-  };
-
-if (hayUSAF) then
-  {
-  _texto = _texto + ["RHS-USAF Detected\n\nAntistasi detects RHS - USAF in the server config.\nNATO will be replaced with USAF."];
-  };
 
 if (hayTFAR or hayACE or hayRHS or hayUSAF) then
   {

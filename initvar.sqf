@@ -33,22 +33,15 @@ closeMarkersUpdating = 0;
 arrayCivs = ["C_man_1","C_man_1_1_F","C_man_1_2_F","C_man_1_3_F","C_man_hunter_1_F","C_man_p_beggar_F","C_man_p_beggar_F_afro","C_man_p_fugitive_F","C_man_p_shorts_1_F","C_man_polo_1_F","C_man_polo_2_F","C_man_polo_3_F","C_man_polo_4_F","C_man_polo_5_F","C_man_polo_6_F","C_man_shorts_1_F","C_man_shorts_2_F","C_man_shorts_3_F","C_man_shorts_4_F","C_scientist_F","C_Orestes","C_Nikos","C_Nikos_aged"];//array of possible civs. Only euro types picked (this is Greece). Add any civ classnames you wish here
 arrayCivVeh =["C_Hatchback_01_F","C_Hatchback_01_sport_F","C_Offroad_01_F","C_SUV_01_F","C_Van_01_box_F","C_Van_01_fuel_F","C_Van_01_transport_F","C_Truck_02_transport_F","C_Truck_02_covered_F"];//possible civ vehicles. Add any mod classnames you wish here
 gruposFIAmid = ["IRG_InfTeam","IRG_InfTeam_AA","IRG_InfTeam_AT"];
-planesCSAT = ["O_Heli_Light_02_unarmed_F","O_Heli_Transport_04_bench_F","O_Heli_Attack_02_F","O_Plane_CAS_02_F","O_Heli_Light_02_F"];
-planesNATO = ["B_Heli_Light_01_F","B_Heli_Light_01_armed_F","B_Heli_Attack_01_F","B_Heli_Transport_01_camo_F","B_Plane_CAS_01_F","B_Heli_Transport_03_F"];
-planesNATOTrans = ["B_Heli_Light_01_F","B_Heli_Transport_01_camo_F","B_Heli_Transport_03_F"];
-vehNATO = ["B_APC_Tracked_01_rcws_F","B_APC_Tracked_01_CRV_F","B_APC_Tracked_01_AA_F","B_MBT_01_cannon_F","B_MBT_01_arty_F","B_MBT_01_mlrs_F","B_MRAP_01_F","B_MRAP_01_hmg_F","B_Truck_01_covered_F","B_Truck_01_fuel_F","B_Truck_01_medical_F","B_APC_Wheeled_01_cannon_F","B_MBT_01_TUSK_F"];//all vehicles from NATO. Add your mod vehicles here, but they will only spawn in bases or airports, and players wont be able to mount them.
 listMilBld = ["Land_Cargo_Tower_V1_F","Land_Cargo_Tower_V1_No1_F","Land_Cargo_Tower_V1_No2_F","Land_Cargo_Tower_V1_No3_F","Land_Cargo_Tower_V1_No4_F","Land_Cargo_Tower_V1_No5_F","Land_Cargo_Tower_V1_No6_F","Land_Cargo_Tower_V1_No7_F","Land_Cargo_Tower_V2_F", "Land_Cargo_Tower_V3_F","Land_Cargo_HQ_V1_F","Land_Cargo_HQ_V2_F","Land_Cargo_HQ_V3_F","Land_Cargo_Patrol_V1_F","Land_Cargo_Patrol_V2_F","Land_Cargo_Patrol_V3_F","Land_HelipadSquare_F","Land_Cargo_Tower_V1_ruins_F","Land_Cargo_Tower_V2_ruins_F","Land_Cargo_Tower_V3_ruins_F"];
 listbld = ["Land_Cargo_Tower_V1_F","Land_Cargo_Tower_V1_No1_F","Land_Cargo_Tower_V1_No2_F","Land_Cargo_Tower_V1_No3_F","Land_Cargo_Tower_V1_No4_F","Land_Cargo_Tower_V1_No5_F","Land_Cargo_Tower_V1_No6_F","Land_Cargo_Tower_V1_No7_F","Land_Cargo_Tower_V2_F", "Land_Cargo_Tower_V3_F"];
 lamptypes = ["Lamps_Base_F", "PowerLines_base_F","Land_LampDecor_F","Land_LampHalogen_F","Land_LampHarbour_F","Land_LampShabby_F","Land_NavigLight","Land_runway_edgelight","Land_PowerPoleWooden_L_F"];
 arrayids = ["Anthis","Costa","Dimitirou","Elias","Gekas","Kouris","Leventis","Markos","Nikas","Nicolo","Panas","Rosi","Samaras","Thanos","Vega"];
 if (isMultiplayer) then {arrayids = arrayids + ["protagonista"]};
 
-armasNATO = ["arifle_MX_F","arifle_MX_GL_F","arifle_MX_SW_F","srifle_EBR_F","srifle_LRR_F","srifle_DMR_03_F","srifle_DMR_02_F","MMG_02_sand_F","arifle_MXM_F","SMG_01_F"];//possible weapons that spawn in NATO ammoboxes
-municionNATO = ["30Rnd_65x39_Caseless_mag","30Rnd_65x39_caseless_mag_Tracer","100Rnd_65x39_Caseless_mag","100Rnd_65x39_caseless_mag_Tracer","20Rnd_762x51_Mag","7Rnd_408_Mag","30Rnd_45ACP_Mag_SMG_01","30Rnd_45ACP_Mag_SMG_01_tracer_green","11Rnd_45ACP_Mag","1Rnd_HE_Grenade_shell","UGL_FlareWhite_F","UGL_FlareGreen_F","1Rnd_Smoke_Grenade_shell","3Rnd_HE_Grenade_shell","HandGrenade","20Rnd_762x51_Mag","10Rnd_338_Mag","130Rnd_338_Mag"];//possible ammo that spawn in NATO ammoboxes
 soldadosFIA = ["B_G_Soldier_F","B_G_Soldier_lite_F","b_g_soldier_unarmed_f","B_G_Soldier_AR_F","B_G_medic_F","B_G_engineer_F","B_G_Soldier_exp_F","B_G_Soldier_GL_F","B_G_Soldier_TL_F","B_G_Soldier_A_F","B_G_Soldier_M_F","B_G_Soldier_LAT_F","B_G_Soldier_SL_F","B_G_officer_F","B_G_Sharpshooter_F"];
 vehFIA = ["B_G_Quadbike_01_F","B_G_Offroad_01_armed_F","B_HMG_01_high_F","B_G_Offroad_01_F","B_G_Van_01_transport_F","B_G_Boat_Transport_01_F","B_G_Mortar_01_F","B_static_AT_F","B_static_AA_F","B_G_Offroad_01_repair_F"];
 
-civUniforms = ["U_C_Poloshirt_blue","U_C_Poloshirt_burgundy","U_C_Poloshirt_stripped","U_C_Poloshirt_tricolour","U_C_Poloshirt_salmon","U_C_Poloshirt_redwhite","U_C_Commoner1_1","U_C_Commoner1_2","U_C_Commoner1_3","U_Rangemaster","U_NikosBody","U_C_Poor_1","U_C_Poor_2","U_C_WorkerCoveralls","U_C_Poor_shorts_1","U_C_Commoner_shorts","U_C_ShirtSurfer_shorts","U_C_TeeSurfer_shorts_1","U_C_TeeSurfer_shorts_2","Item_U_OrestesBody"];
 //allMagazines = MantitanqueAAF + municionAAF + municionNATO;
 
 //All weapons, MOD ones included, will be added to this arrays, but it's useless without integration, as if those weapons don't spawn, players won't be able to collect them, and after, unlock them in the arsenal.
@@ -148,7 +141,6 @@ if ("rhs_weap_akms" in lockedWeapons) then {
 if ("rhs_weap_m4a1_d" in lockedWeapons) then {
   hayUSAF = true;
 };
-
 if (!isNil "ace_common_settingFeedbackIcons") then {
   hayACE = true;
 };
@@ -181,25 +173,10 @@ lrRadio = "";
 
 vfs = [];
 
-// Initialisation of units and gear
-if (hayRHS) then {
-  call compile preprocessFileLineNumbers "CREATE\templateRHS.sqf";
-  call compile preprocessFileLineNumbers "CREATE\templateVMF.sqf";
-}
-else {
-  call compile preprocessFileLineNumbers "CREATE\templateAAF.sqf";
-  call compile preprocessFileLineNumbers "CREATE\templateOPFOR_CSAT.sqf";
-};
-
-if (hayUSAF) then {
-  call compile preprocessFileLineNumbers "CREATE\templateUSAF.sqf";
-}
-else {
-  call compile preprocessFileLineNumbers "CREATE\templateNATO.sqf";
-};
+call compile preprocessFileLineNumbers "CREATE\templateRHS.sqf";
+call compile preprocessFileLineNumbers "CREATE\templateVMF.sqf";
+call compile preprocessFileLineNumbers "CREATE\templateUSAF.sqf";
 call compile preprocessFileLineNumbers "Municion\gearList.sqf";
-
-
 
 // deprecated variables, used to maintain compatibility
 gruposAAFsmall = infPatrol;
@@ -361,7 +338,6 @@ if (!isNil "ace_common_settingFeedbackIcons") then
   unlockedWeapons = unlockedWeapons + ["ACE_HandFlare_White","ACE_HandFlare_Red","ACE_VMH3"];
 
   itemsAAF = itemsAAF + ["ACE_Kestrel4500","ACE_ATragMX"];
-  armasNATO = armasNATO + ["ACE_M84","ACE_UAVBattery"];
   hayACE = true;
   if (isClass (configFile >> "CfgSounds" >> "ACE_EarRinging_Weak")) then
     {
@@ -388,21 +364,6 @@ for "_i" from 0 to (count _allVehicles - 1) do {
       FIA_texturedVehicleConfigs pushBackUnique _vehicle;
     };
 };
-
-/*
-if (!isNil "ace_medical_level") then
-    {
-    unlockedItems = unlockedItems + ["ACE_EarPlugs","ACE_RangeCard","ACE_Clacker","ACE_M26_Clacker","ACE_DeadManSwitch","ACE_DefusalKit","ACE_MapTools","ACE_Flashlight_MX991","ACE_Sandbag_empty","ACE_wirecutter","ACE_SpraypaintBlue","ACE_SpraypaintGreen","ACE_SpraypaintRed","ACE_SpraypaintBlack"];
-    itemsAAF = itemsAAF + ["ACE_Kestrel4500","ACE_ATragMX"];
-    armasNATO = armasNATO + ["ACE_M84"];
-    hayACE = true;
-    if (ace_medical_level != 0) then
-      {
-      unlockedItems = unlockedItems + ["ACE_atropine","ACE_fieldDressing","ACE_quikclot","ACE_bloodIV_250","ACE_epinephrine","ACE_morphine","ACE_personalAidKit","ACE_plasmaIV_250","ACE_salineIV_250","ACE_tourniquet","ACE_elasticBandage","ACE_packingBandage"];
-      };
-   };
-
-*/
 
 if !(isnil "XLA_fnc_addVirtualItemCargo") then {
   hayXLA = true;
