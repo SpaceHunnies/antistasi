@@ -8,21 +8,25 @@
 * The player side starts with almost nothing and gains resources and capabilities over the course of the game.
 * Similarly, the AAF starts with limited capabilites, but gains them over time, but, their capabilities always outstrip the player.
 * Both sides are supported by outside major powers, NATO and Russia.
-* Victory is achieved when the FIA control the majority of island, plus the main airport.
+* Victory is achieved when the FIA control the majority of island, plus the main airport (a Russian stronghold).
 * Island control is based on support of the population, each city can support FIA or AAF.
 * Cities support a side based on an influence score, which reflects the civilians attitude towards the two factions.
 * Cities support the side which provides security and economic support.
 * Cities can be secured by placing forces and assets in the city, and eliminating enemy assets and forces.
 * Cities can be supported economically by providing power, or do missions on behalf of a town.
-* There are several types of military installations: outposts, airports, bases, roadblocks, and AA Hills.
+* There are several types of military installations: outposts, airports, bases, roadblocks, and more.
 * There are several types of economic installations: factories, resources, and seaports.
 * Occasionally the players are assigned important, time-sensitive high risk/high reward missions.
 * NATO supports the player through training, recon, and material, tied to the level of economic support the player provides to cities.
 * Players can go behind enemy lines to hack radio towers, placing a bug which allows them to gain more intel (and missions).
+* ALiVE support, so players get persistent saves and War Room integration.
+* Players may go undercover, hiding themselves from the AAF.
+* Players can hit OPFOR "soft targets", such as convoys, to decrease their fighting/reinforcement capability.
 
 ## Guidelines
 
-* Follow ACE style guidelines
+* Follow ACE style guidelines.
+* Write tests.
 * Any change in important scores or resources should be communicated to the player
 * All choices should be interesting.
 * Behavior should be emergent.
@@ -37,9 +41,14 @@
 
 ## Core systems
 
-* Influence - economic and military
-* Installations
-* Mission intel (Reworking rewards and building the radio tower mission)
-* NATO rework
-* Tactical progression - enemy side
-* Tactical progression - player side
+* A dynamic, changing OPFOR with roadblocks, bases, reinforcement, patrols and convoys.
+* Influence - economic and military. Military == security (roadblocks/ob posts), economic == providing humanitarian relief, fuel and power.
+* Installations.
+* Mission system (Intel and more).
+* NATO - provides UAVs, training, and small arms.
+* Tactical progression - enemy side. Different enemy divisions and difficulties.
+* Tactical progression - player side. Player ranks, schematics, unlocks, etc.
+* Undercover. 
+* Fast-travel. Build camps to create forward bases.
+* Base building. Move your base around the island.
+
