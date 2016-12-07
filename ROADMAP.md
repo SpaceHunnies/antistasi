@@ -39,6 +39,7 @@
 * NATO support should feel like god coming down from the sky to help you - it should usually offer you tactical capability beyond your current level.
 * Changing the map/factions should be easy. Antistasi-SH Tanoa should be easy to port, basically just throw down some markers in the editor.
 * Should scale from 1 player to ??? (the bigger the scale the better).
+* Players should have to be mobile, fast, and use the element of surprise. Staying in one place, attempting to hold a military installation alone, should lead to defeat.
 
 ## Core systems
 
