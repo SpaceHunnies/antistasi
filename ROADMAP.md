@@ -38,6 +38,7 @@
 * Russia support should act as an "ambient difficulty" level - 100 is max, 0 is minimum.
 * NATO support should feel like god coming down from the sky to help you - it should usually offer you tactical capability beyond your current level.
 * Changing the map/factions should be easy. Antistasi-SH Tanoa should be easy to port, basically just throw down some markers in the editor.
+* Should scale from 1 player to ??? (the bigger the scale the better).
 
 ## Core systems
 
